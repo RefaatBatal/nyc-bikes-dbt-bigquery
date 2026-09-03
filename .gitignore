@@ -179,3 +179,17 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# --- Project-specific additions ---
+
+# GCP / BigQuery credentials — never commit these
+*.json
+keys/
+credentials/
+*-key.json
+service-account*.json
+
+# dbt build artifacts (target/ already covered above, these aren't)
+dbt_packages/
+logs/
+.user.yml
